@@ -1,0 +1,41 @@
+Create a data model representing a Hotel with Floors and Rooms 🏨
+This model should provide answers to the following questions:
+The list of Rooms available for rent on a specific date
+The list of Rooms which can be occupied by at least 3 people on a specific date
+The amount of unrentable Rooms (janitor closets, public laundry room, gym, etc.)
+The amount of Rooms having a private Kitchen
+The average amount of windows per Floor
+The amount of Floors having Rooms with carpets
+
+CREATE TABLE floors (
+    id INT AUTO_INCREMENT KEY
+    rooms INT
+);
+
+CREATE TABLE rooms (
+    id INT AUTO_INCREMENT KEY,
+    floorId INT,
+    rentable BOOLEAN,
+    //vacant BOOLEAN,
+    rentedOn DATETIME,
+    rentedTill DATETIME,
+    capacity INT,
+    kitchen BOOLEAN,
+    windows INT,
+    carpeted BOOLEAN
+);
+
+// List of rooms available on a specific date = all rentable rooms where the searched-for date does not fall
+// between the rentedOn and rentedTill dates entered.
+
+// List of rooms that can have at least 3 people on a specific date = all rentable rooms where the searched-for date
+// does not fall between the rentedOn and rentedTill dates and the capacity is >= 3
+
+// Unrentable rooms = all rooms with a rentable value of false
+
+// Rooms with kitchens = all rooms with a kitchen boolean value of true
+
+// Average amount of windows per floor = average function on the number of windows per room added up,
+// divided by the number of floors in the floor table (or unique floorIds in rooms table)
+
+// Amount of floors with carpets = all rooms with a carpet boolean value of true

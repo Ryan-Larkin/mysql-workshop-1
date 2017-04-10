@@ -1,5 +1,8 @@
 Create a database named decodemtl_test within MySQL
 Create a database named decodemtl_addressbook within MySQL
 
-CREATE DATABASE decodemtl_test;
-CREATE DATABASE decodemtl_addressbook;
+MYSQL> CREATE DATABASE decodemtl_test;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> CREATE DATABASE decodemtl_addressbook;
+Query OK, 1 row affected (0.00 sec)

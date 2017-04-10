@@ -1,0 +1,19 @@
+Create a data model representing a Barn with Chickens 🐣
+This model should provide answers to the following questions:
+How many rooster, hen and chicks existed in the Barn on a specific date
+How many chicks will come to age on a specific date
+
+CREATE TABLE Animals (
+    id INT AUTO_INCREMENT KEY,
+    type ENUM('rooster', 'hen', 'chick'),
+    birthday DATETIME,
+    dateRemoved DATETIME
+);
+
+// dateRemoved was the date when the animal was removed from the barn
+// To find how many animals existed in the barn on a specific date, just search for 
+// what animals fit the criteria of your specific date being between the birthday 
+// and the dateRemoved
+
+// To find how many chicks will come to age on a specific date, search for which chicks have a birthday where
+// birthday + days to come to age = the date you want to know about.

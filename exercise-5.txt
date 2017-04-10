@@ -1,0 +1,21 @@
+Create table Account for database decodemtl_addressbook
+Create table AddressBook for database decodemtl_addressbook
+Create table Entry for database decodemtl_addressbook
+Create table Test for database decodemtl_addressbook
+
+USE decodemtl_addressbook;
+
+mysql> CREATE TABLE AddressBook (
+    ->     addressID INT AUTO_INCREMENT KEY
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE Entry (
+    ->     entryID INT AUTO_INCREMENT KEY
+    -> );
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE TABLE Test (
+    ->     testID INT AUTO_INCREMENT KEY
+    -> );
+Query OK, 0 rows affected (0.01 sec)
